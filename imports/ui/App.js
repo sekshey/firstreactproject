@@ -2,11 +2,21 @@ import React, {Component,Proptypes} from 'react';
 import {render} from 'react-dom';
 
 import {Greeter} from './Greeter.js';
+import {Field} from './Field.js';
 
 export class App extends Component {
-    render() {
+  handleNewName(name){
+  this.setState({
+    name: name
+  });
+  };
+  render() {
+      var name=this.state.name;
         return (
-          <Greeter name='Sekshey'/>
+          <div>
+            <Greeter name={name}/>
+            <Field onNewName={this.handleNewName.bind(this)}/>
+          </div>
         );
     };
 };
