@@ -1,12 +1,10 @@
 import React, {Component,Proptypes} from 'react';
 import {render} from 'react-dom';
 
-import {Greeter} from './Greeter.js';
-
-export class App extends Component {
+export class Greeter extends Component {
     render() {
         return (
-          <Greeter/>
+          <h1> Hello World! </h1>
         );
     };
 };
